@@ -52,9 +52,17 @@ function play(clickedId) {
     if (topRight !== undefined && topRight === middleCenter && middleCenter === btmLeft){
         alert(`Winner is ${topRight}`)
     }
-}
 
-    function reset(){
-        
+    let fullBoard = true;
+
+    for (let i = 0; i <= 8; i++){
+        if (board[i] === undefined){
+            fullBoard = false;
+        } 
     }
 
+    if (fullBoard === true) {
+        alert("It's a tie!" )
+    }
+
+}
